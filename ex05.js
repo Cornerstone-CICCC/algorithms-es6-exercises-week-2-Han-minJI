@@ -19,6 +19,7 @@ Use some sort of looping. Do Not use String.prototype.replace
 
 const urlEncode = function (text) {
   // Put your solution here
+  
 };
 
 console.log(urlEncode("cornerstone college")); //cornerstone%20college

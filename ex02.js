@@ -8,6 +8,22 @@ Create a function named conditionalSum that will be given an array of numbers an
 
 const conditionalSum = function (values, condition) {
   // Your code here
+  const elementSum = values.filter(num => {
+
+    if(condition === "even"){
+      if(num % 2 === 0){
+        return num
+      }
+    } else if(condition === "odd"){
+      if(num % 2 === 1){
+        return num
+      }
+    }
+  }).reduce((total, curr) => {
+    return total += curr
+  }, 0)
+
+  return elementSum
 };
 
 console.log(conditionalSum([1, 2, 3, 4, 5], "even")); // 6

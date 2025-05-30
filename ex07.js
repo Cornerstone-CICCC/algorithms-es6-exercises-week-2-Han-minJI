@@ -10,6 +10,25 @@ Not sure where to get started? It might be useful to start by creating a variabl
 
 const checkAir = function (samples, threshold) {
   // Code here!
+  let cleanNum = 0
+  let dirtyNum = 0
+  let status
+
+  samples.forEach(element => {
+    if(element === "clean")
+      cleanNum ++
+
+    else if(element === "dirty")
+      dirtyNum ++
+  });
+
+  if(dirtyNum / cleanNum < threshold){
+     return status = 'clean'
+  }else{
+    return status = 'Polluted'
+  }
+  
+
 };
 
 console.log(
