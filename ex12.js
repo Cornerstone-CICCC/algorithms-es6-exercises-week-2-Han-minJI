@@ -22,7 +22,33 @@ This one is a doozy! We might want to start by creating a helper function called
 
 const chooseRecipe = function (bakeryA, bakeryB, recipes) {
   // Code here!
+  ingredientCheck()  
+
+  return recipeName
+  
+
 };
+
+const ingredientCheck = function(bakeryA, bakeryB, recipes){
+
+  let recipeName = ''
+  recipes.forEach(recipes => {
+    recipes.ingredients.forEach(recipeIngre => {
+      bakeryA.forEach(ingreA => {
+        if(ingreA === recipeIngre){
+          bakeryB.forEach(ingreB => {
+            if(ingreB === recipeIngre){
+              recipeName = recipes
+            }
+          })
+        }
+      })
+    })
+  });
+
+  return recipeName
+
+}
 
 let bakeryA = ["saffron", "eggs", "tomato paste", "coconut", "custard"];
 let bakeryB = ["milk", "butter", "cream cheese"];

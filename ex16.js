@@ -17,7 +17,74 @@ For more information on casing styles, read Wikipedia's Special Case Styles for 
 
 const makeCaze = function (input, caze) {
   // Put your solution here
+  const result = []
+  let resultString = ''
+  let splitInput =''
+
+  if(caze === 'camel'){
+    splitInput = input.split(' ')
+    splitInput.forEach((word, index) => {
+      if(index === 0){
+        result.push(word)
+      }else{
+        result.push(`${word[0].toUpperCase()}${word.slice(1)}`)
+      }
+      
+    });
+    resultString = result.join('')
+    return resultString
+
+  }else if(caze === 'pascal'){
+    splitInput = input.split(' ')
+    splitInput.forEach((word) => {
+      result.push(`${word[0].toUpperCase()}${word.slice(1)}`)
+      
+    });
+    resultString = result.join('')
+    return resultString
+
+  }else if(caze === 'snake'){
+    splitInput = input.split(' ')
+    resultString = splitInput.join("_")
+    return resultString
+    
+  }else if(caze === 'kebab'){
+    splitInput = input.split(' ')
+    resultString = splitInput.join("-")
+    return resultString
+    
+  }else if(caze === 'title'){
+    splitInput = input.split(' ')
+    splitInput.forEach((word) => {
+      result.push(`${word[0].toUpperCase()}${word.slice(1)}`)
+      
+    });
+    resultString = result.join(' ')
+    return resultString
+    
+  }else if(caze === 'vowel'){
+    splitInput = input.split(' ')
+    splitInput.forEach((word) => {
+      
+      result.push(`${word[0].toUpperCase()}${word.slice(1)}`)
+      
+    });
+    resultString = result.join(' ')
+    return resultString
+  }else if(caze === 'consonant'){
+    
+  }else if(caze === 'camel'){
+    
+  }else if(caze[0]=== 'upper' && caze[1] === 'snake'){
+    splitInput = input.split(' ')
+    splitInput.forEach(word => {
+      result.push(word.toUpperCase())
+    })
+    resultString = result.join('_')
+    return resultString
+   }
 };
+
 
 console.log(makeCaze("this is a string", "camel")); // thisIsAString
 console.log(makeCaze("this is a string", "pascal")); // ThisIsAString

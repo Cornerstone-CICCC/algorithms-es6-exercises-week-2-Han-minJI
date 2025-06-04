@@ -10,6 +10,16 @@ Create a function named organizeInstructors that will receive an array of instru
 
 const organizeInstructors = function (instructors) {
   // Put your solution here
+  let result = {}
+  for(const key of instructors){
+    if(!(key['course'] in result)){
+      result[key['course']] = []
+    }
+    result[key['course']].push(key['name']) 
+    
+  }
+
+  return result
 };
 
 console.log(

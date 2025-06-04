@@ -11,6 +11,7 @@ Create a function named camelCase that will convert a string to camel case, and 
 const camelCase = function (input) {
   // Your code here
   const arraysWord = input.split(' ')
+  
   return arraysWord
 };
 
